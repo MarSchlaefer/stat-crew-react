@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DropdownButton, Dropdown } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 
 class HomePage extends Component {
     render() {
@@ -7,30 +7,50 @@ class HomePage extends Component {
           <div>
             <div className="nav-bar">
                 <span>
-                    <DropdownButton id="dropdown-basic-button" title="Games">
-                        <Dropdown.Item href="#/action-1">New Game</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Game History</Dropdown.Item>
-                    </DropdownButton>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Games
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">New Game</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Game History</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </span>
                 <span>
-                    <DropdownButton id="dropdown-basic-button" title="Teams">
-                        <Dropdown.Item href="#/action-1">New Team</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">My Teams</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">All Teams</Dropdown.Item>
-                    </DropdownButton>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Teams
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">New Team</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">My Teams</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">All Teams</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </span>
                 <span>
-                    <DropdownButton id="dropdown-basic-button" title="Sports">
-                        <Dropdown.Item href="#/action-1">New Sport</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">My Sports</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">All Sports</Dropdown.Item>
-                    </DropdownButton>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Sports
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">New Sport</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">My Sports</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">All Sports</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </span>
                 <span>
-                    <DropdownButton id="dropdown-basic-button" title="Reports">
-                        <Dropdown.Item href="#/action-1">My Reports</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">All Reports</Dropdown.Item>
-                    </DropdownButton>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Reports
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">My Reports</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">All Reports</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </span>
             </div>
             <div className="recent-reports-container">
