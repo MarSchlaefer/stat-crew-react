@@ -3,7 +3,7 @@ import { Dropdown, Menu } from 'semantic-ui-react'
 
 const NavMenu = () => (
   <div>
-    <Menu attached='top'>
+    <Menu secondary attached='top'>
       <Dropdown item text="Games"> 
         <Dropdown.Menu>
           <Dropdown.Item>New Game</Dropdown.Item>

@@ -6,7 +6,14 @@ class HomePage extends Component {
       return (
           <React.Fragment>
               <NavMenu />
+              <div>
+                <h1>Recent Reports</h1>
+              </div>
+              <div>
+                <h1>Top Players</h1>
+              </div>
           </React.Fragment>
+
       );
     }
   }
