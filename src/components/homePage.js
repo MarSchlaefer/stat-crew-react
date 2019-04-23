@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import NavMenu from './navMenu'
+import { connect } from 'react-redux';
+import withAuth from '../hocs/withAuth';
+import NavMenu from './navMenu';
 
 class HomePage extends Component {
     render() {
@@ -17,6 +19,10 @@ class HomePage extends Component {
       );
     }
   }
+
+  const mapStateToProps = ({ usersReducer: { user: { username } } }) => ({
+    username
+  })
   
-  export default HomePage;
+  export default withAuth(connect(mapStateToProps)(HomePage))
   
