@@ -6,7 +6,8 @@ import { Button, Form, Segment, Message } from 'semantic-ui-react';
 
 
 class Login extends Component {
-  state = { username: '', password: ''}
+
+  state = { username: '', password: '' }
 
     render() {
       return this.props.loggedIn ? (
@@ -47,7 +48,8 @@ class Login extends Component {
     }
 
     handleChange = (e, semanticInputData) => {
-      this.setState({ [semanticInputData.name]: [semanticInputData.value] })
+      // console.log(this.state.username, this.state.password)
+      this.setState({ [semanticInputData.name]: semanticInputData.value })
     }
 
     handleLoginSubmit = () => { // semantic preventsDefault for you
