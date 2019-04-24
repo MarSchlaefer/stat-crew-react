@@ -6,7 +6,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    console.log('% APP PROPS: ', 'color: firebrick', this.props)
+    console.log('%c APP PROPS: ', 'color: firebrick', this.props)
     return (
       <div className="App">
         <Switch>
