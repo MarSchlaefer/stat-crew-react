@@ -59,11 +59,6 @@ class Login extends Component {
 
   } //end of class
 
-  // const mapDispatchToProps = (dispatch) => {
-  //   return {
-  //     loginUser: (username, password) => dispatch(loginUser(username, password))
-  //   }
-  // }
 
   const mapStateToProps = ({usersReducer: { authenticatingUser, failedLogin, error, loggedIn }}) => ({
     authenticatingUser,
