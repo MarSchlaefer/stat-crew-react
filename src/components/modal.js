@@ -1,18 +1,38 @@
-import React from 'react'
-import { Header, Image, Modal } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Modal } from 'semantic-ui-react'
+import GameForm from './gameForm'
+import TeamForm from './teamForm'
 
-const ModalModalExample = (props) => (
-  <Modal open={props.modal} closeIcon onClose={props.handleModal}>
-    <Modal.Header>{props.modalType}</Modal.Header>
-    <Modal.Content image>
-      <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
-      <Modal.Description>
-        <Header>Default Profile Image</Header>
-        <p>We've found the following gravatar image associated with your e-mail address.</p>
-        <p>Is it okay to use this photo?</p>
-      </Modal.Description>
-    </Modal.Content>
-  </Modal>
-)
 
-export default ModalModalExample
+class ModalForm extends Component {
+    
+    state = {
+
+    }
+    
+    render () {
+        return (
+            <Modal open={this.props.modal} closeIcon onClose={this.props.handleModal}>
+                <Modal.Header>{this.props.modalType}</Modal.Header>
+                <Modal.Content>
+                    {this.renderModalContent()}
+                </Modal.Content>
+            </Modal>
+        )
+    }
+
+    renderModalContent = () => {
+        if (this.props.modalType === 'New Game') {
+            return <GameForm />
+        } else if (this.props.modalType === 'New Team') {
+            return <TeamForm />
+        } else if (this.props.modalType === '') {
+            return null
+        }
+    }
+
+} // end of class
+
+
+
+export default ModalForm
