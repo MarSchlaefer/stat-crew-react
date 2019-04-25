@@ -10,21 +10,21 @@ const NavMenu = (props) => {
     <Menu secondary attached='top'>
       <Dropdown item text="Games"> 
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => props.handleModal("game")}>New Game</Dropdown.Item>
+          <Dropdown.Item onClick={() => props.handleModal("New Game")}>New Game</Dropdown.Item>
           <Dropdown.Item onClick={props.handleGameHistory}>Game History</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
 
       <Dropdown item text="Teams"> 
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => props.handleModal("team")}>New Team</Dropdown.Item>
+          <Dropdown.Item onClick={() => props.handleModal("New Team")}>New Team</Dropdown.Item>
           <Dropdown.Item onClick={props.handleAllTeams}>All Teams</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
 
       <Dropdown item text="Sports"> 
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => props.handleModal("sport")}>New Sport</Dropdown.Item>
+          <Dropdown.Item onClick={() => props.handleModal("New Sport")}>New Sport</Dropdown.Item>
           <Dropdown.Item onClick={props.handleAllSports}>All Sports</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
